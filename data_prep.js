@@ -1,4 +1,4 @@
-const fs = require ('fs');
+
 const Sequelize = require('sequelize');
 
 // set up sequelize to point to our postgres database
