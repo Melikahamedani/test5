@@ -49,9 +49,8 @@ exports.prep = () => {
 //Add Student
 exports.addStudent = (stud) => {
     return new Promise((resolve, reject) => {
-
         student.create({
-            studId: stud.studId,
+            StudId: stud.studId,
             name: stud.name,
             program: stud.program,
             gpa: stud.gpa
@@ -59,7 +58,6 @@ exports.addStudent = (stud) => {
             resolve()
         }).catch(err => reject("unable to add the student"))
     });
-
 }
 
 
