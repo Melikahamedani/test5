@@ -1,4 +1,3 @@
-
 const Sequelize = require('sequelize');
 
 // set up sequelize to point to our postgres database
@@ -46,7 +45,16 @@ exports.prep = () => {
 }
 
 
+
 //Add Student
+exports.allStudents = () => {
+    return new Promise((resolve, reject) => {
+        student.findAll().then(data => {
+            resolve(data)
+        }).catch(err => reject('no results returned'))
+    })
+
+}
 exports.addStudent = (stud) => {
     return new Promise((resolve, reject) => {
         student.create({
